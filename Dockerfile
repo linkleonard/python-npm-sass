@@ -1,5 +1,8 @@
 FROM python:3.4-wheezy
 
+# Update python package managers
+RUN wget https://bootstrap.pypa.io/ez_setup.py -O - | python
+
 # Prepare nodejs
 RUN curl https://deb.nodesource.com/setup | bash
 RUN apt-get update && apt-get install -y \
