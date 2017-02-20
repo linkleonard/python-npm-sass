@@ -6,7 +6,8 @@ dependencies:
     override:
         - docker info
         - docker build --rm=false -t linkleonard/python-npm-sass:latest .
+        - docker build --rm=false -t linkleonard/python-npm-sass-test .
 
 test:
     override:
-        - docker run linkleonard/python-npm-sass:latest /bin/bash /app/tests.sh
+        - docker run linkleonard/python-npm-sass-test /bin/bash /app/tests.sh
