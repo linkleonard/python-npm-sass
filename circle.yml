@@ -16,6 +16,6 @@ deployment:
         branch: master
         commands:
             - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
-            - docker tag linkleonard/python-npm-sass:latest linkleonard/python-npm-sass:py3.5-node6
+            - docker tag -f linkleonard/python-npm-sass:latest linkleonard/python-npm-sass:py3.5-node6
             - docker push linkleonard/python-npm-sass:latest
             - docker push linkleonard/python-npm-sass:py3.5-node6
