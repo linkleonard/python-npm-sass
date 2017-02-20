@@ -2,12 +2,11 @@ machine:
     services:
         - docker
 
-dependencies:
+compile:
     override:
         - docker info
         - docker build --rm=false -t linkleonard/python-npm-sass:latest .
-        - docker build --rm=false -t linkleonard/python-npm-sass-test .
-
+        - docker build --rm=false --file ./Dockerfile-test -t linkleonard/python-npm-sass-test .
 test:
     override:
         - docker run linkleonard/python-npm-sass-test /bin/bash /app/tests.sh
