@@ -9,4 +9,4 @@ dependencies:
 
 test:
     override:
-        - docker run linkleonard/python-npm-sass:latest /bin/bash tests.sh
+        - docker run linkleonard/python-npm-sass:latest /bin/bash /app/tests.sh
